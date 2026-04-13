@@ -261,6 +261,34 @@ footer{background:var(--bg2);border-top:1px solid var(--border);text-align:cente
 .carousel-nav:hover{background:#7c3aed}
 .carousel-prev{left:10px}
 .carousel-next{right:10px}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Right side container */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile image styling */
+.profile-pic {
+  width: 500px;   /* increased from 220px */
+  height: 500px;  /* keep equal for perfect circle */
+  border-radius: 50%;
+  border: 2px solid #360069; /* slightly thicker border */
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 </style>
 </head>
@@ -282,17 +310,31 @@ footer{background:var(--bg2);border-top:1px solid var(--border);text-align:cente
 <div class="hero-wrap" id="home">
   
 
-<div class="hero">
+
+   <div class="hero">
   <div class="hero-left">
     <div class="hero-welcome">Welcome</div>
     <div class="hero-intro">Hi, my name is</div>
     <h1>Farheen Shaikh</h1>
-    <div class="hero-dynamic-line"><span id="tw-dynamic" class="tw-dynamic-text"></span><span class="tw-dynamic-cursor">|</span></div>
+    <div class="hero-dynamic-line">
+      <span id="tw-dynamic" class="tw-dynamic-text"></span>
+      <span class="tw-dynamic-cursor">|</span>
+    </div>
     <div class="hero-caption">Inferencing the world around 🚀</div>
+  </div>
+ 
+   <!-- NEW RIGHT SECTION -->
+  <div class="hero-right">
+    <div class="profile-pic">
+      <img src="img1.png" alt="Farheen Shaikh">
+    </div>
   </div>
  
 
 </div>
+ <div class="section-label">About Me</div>
+<div class="section-title">What I like to do</div>
+
 
 </div>
 
@@ -391,28 +433,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);text-align:cente
      <button class="carousel-nav carousel-prev" onclick="slideProject(-1)">&#8249;</button>
   <button class="carousel-nav carousel-next" onclick="slideProject(1)">&#8250;</button>
   <div class="research-track">
-<div class="research-card">
-      <div class="research-card-img"><img src="ReleaseHub.png" alt="ReleaseHub" /></div>
-      <div class="research-card-content">
-        <div class="research-title">Developed High-Perforance GenAI Release Notes With <br> LLM Abstention</div>
-        <div class="research-skills">
-          <span class="research-skill-tag">Python</span>
-          <span class="research-skill-tag">PyTorch</span>
-          <span class="research-skill-tag">TensorRT</span>
-          <span class="research-skill-tag">Claude</span>
-          <span class="research-skill-tag">Docker</span>
-          <span class="research-skill-tag">Triton</span>
-          <span class="research-skill-tag">SageMaker</span>
-          <span class="research-skill-tag">AgentCore</span>
-          <span class="research-skill-tag">S3</span>
-          <span class="research-skill-tag">Kubernetes</span>
-          <span class="research-skill-tag">Git</span>
-        </div>
-        <a href="https://github.com/farheen-shaikh530/Release-Note-Generative-AI-Framework-LLM-Abstain" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
-      </div>
-    </div>
-
-     <div class="research-card">
+   <div class="research-card">
       <div class="research-card-img"><img src="QML.png" alt="Quantum ML Chart" /></div>
       <div class="research-card-content">
         <div class="research-title"> Evaluate Efficacy Of Quantum Neural Network Model To Flag<br>Advance-Fee Credit Card Frauds</div>
@@ -431,6 +452,30 @@ footer{background:var(--bg2);border-top:1px solid var(--border);text-align:cente
         <a href="https://github.com/farheen-shaikh530" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
       </div>
     </div>
+
+
+<div class="research-card">
+    <div class="research-card-img"><img src="ReleaseHub.png" alt="ReleaseHub" /></div>
+      <div class="research-card-content">
+        <div class="research-title">Developed High-Perforance GenAI Release Notes With <br> LLM Abstention</div>
+        <div class="research-skills">
+          <span class="research-skill-tag">Python</span>
+          <span class="research-skill-tag">PyTorch</span>
+          <span class="research-skill-tag">TensorRT</span>
+          <span class="research-skill-tag">Claude</span>
+          <span class="research-skill-tag">Docker</span>
+          <span class="research-skill-tag">Triton</span>
+          <span class="research-skill-tag">SageMaker</span>
+          <span class="research-skill-tag">AgentCore</span>
+          <span class="research-skill-tag">S3</span>
+          <span class="research-skill-tag">Kubernetes</span>
+          <span class="research-skill-tag">Git</span>
+        </div>
+        <a href="https://github.com/farheen-shaikh530/Release-Note-Generative-AI-Framework-LLM-Abstain" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
+      </div>
+</div>
+
+  
 
 
     <div class="research-card">
