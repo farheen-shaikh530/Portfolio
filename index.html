@@ -103,10 +103,7 @@ section{padding:6rem 3rem}
 .hobby-lightbox.open{display:flex}
 .hobby-lightbox img{max-width:80%;max-height:80vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 .hobby-lightbox-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:#f0ecff;cursor:pointer;background:none;border:none}
-.hobby-lightbox-nav{position:absolute;top:50%;font-size:2.5rem;color:#f0ecff;cursor:pointer;background:rgba(124,58,237,.5);border:none;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.hobby-lightbox-nav:hover{background:#7c3aed}
-.hobby-lightbox-prev{left:1.5rem}
-.hobby-lightbox-next{right:1.5rem}
+
 .hobby-caption{position:absolute;bottom:2rem;color:#f0ecff;font-size:.9rem;font-weight:500;background:rgba(124,58,237,.6);padding:6px 18px;border-radius:20px}
 
 /* ── PROJECTS ────────────────────────────────────────────── */
@@ -736,15 +733,8 @@ var hobbyImgs = [
 
 ];
 var hobbyIdx = 0;
-function openHobby(i){
-  hobbyIdx = i;
-  document.getElementById('hobby-lightbox-img').src = hobbyImgs[i].src;
-  document.getElementById('hobby-lightbox').classList.add('open');
-}
-function navHobby(d){
-  hobbyIdx = (hobbyIdx + d + hobbyImgs.length) % hobbyImgs.length;
-  document.getElementById('hobby-lightbox-img').src = hobbyImgs[hobbyIdx].src;
-}
+
+
 
 function openExp(i) {
   var d = EXP[i];
