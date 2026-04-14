@@ -306,6 +306,60 @@ footer{background:var(--bg2);border-top:1px solid var(--border);text-align:cente
   align-items: center;
   justify-content: space-between;
 }
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Card */
+.paper-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  padding: 1rem;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.paper-card:hover {
+  transform: translateY(-5px);
+  border-color: #a855f7;
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25);
+}
+
+/* Icon */
+.paper-icon {
+  font-size: 1.6rem;
+}
+
+/* Text */
+.paper-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.paper-meta {
+  font-size: 0.8rem;
+  color: var(--text2);
+  margin-top: 0.2rem;
+}
+
+/* Layout */
+.paper-info {
+  text-align: left;
+}
 
 /* Right side container */
 .hero-right {
@@ -616,36 +670,28 @@ footer{background:var(--bg2);border-top:1px solid var(--border);text-align:cente
 </section>
 
 <!-- BLOGS & PAPERS -->
-<section class="blogs-standalone" id="blogs-standalone" style="text-align: center; padding-top:2rem;">
-  <div class="section-title">What I Write</div>
-  <div class="bm-grid" style="display: inline-block; text-align: left; max-width: 800px; width: 100%;">
-    <div class="bm-col">
-      <div class="bm-col-header">
-        <svg viewBox="0 0 24 24"><path fill="#a78bfa" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        Blogs
-      </div>
-      <a href="https://www.linkedin.com/posts/farheen-shaikh0509_activity-7449347659405901824-lXJU?utm_source=share&utm_medium=member_desktop&rcm=ACoAACitDZIBs3IjXRYzTidWOsM3xHPwOlyN-Uo" target="_blank" class="bm-card">
-        <div class="bm-tag">LLM · Optimization · MCP</div>
-        <div class="bm-title">The Hidden Cost of RAG: Why MCP Matters More Than Prompt Caching</div>
-        <div class="bm-arrow">→</div>
-      </a>
+<section class="blogs-standalone" id="blogs-standalone" style="text-align:center; padding-top:2rem;">
+  
+  <div class="section-title">Journal Publications</div>
 
-      <a href="https://www.linkedin.com/pulse/inference-real-bottleneck-ai-systems-farheen-shaikh-k8gvc" target="_blank" class="bm-card">
-        <div class="bm-tag">AI Systems · Performance</div>
-        <div class="bm-title">Inference: The Real Bottleneck in AI Systems</div>
-        <div class="bm-arrow">→</div>
-      </a>
-      <a href="https://www.linkedin.com/pulse/what-llm-abstention-happens-work-when-ai-says-i-dont-know-shaikh-cto6c" target="_blank" class="bm-card">
-        <div class="bm-tag">LLM · Hallucination · Abstention</div>
-        <div class="bm-title">What is LLM Abstention? What Happens When AI Says "I Don't Know"</div>
-        <div class="bm-arrow">→</div>
-      </a>
-      <a href="https://www.linkedin.com/pulse/ai-vs-human-translators-experienced-professionals-large-shaikh-gtx2c" target="_blank" class="bm-card">
-        <div class="bm-tag">AI · Translation · NLP</div>
-        <div class="bm-title">AI vs Human Translators: Experienced Professionals vs Large Language Models</div>
-        <div class="bm-arrow">→</div>
-      </a>
-    </div>
+  <div class="papers-grid">
+
+    <a href="paper1.pdf" target="_blank" class="paper-card">
+      <div class="paper-icon">📄</div>
+      <div class="paper-info">
+        <div class="paper-title">QML Optimization in LLM Systems</div>
+        <div class="paper-meta">AI/ML • Retrieval • Performance</div>
+      </div>
+    </a>
+
+    <a href="paper2.pdf" target="_blank" class="paper-card">
+      <div class="paper-icon">📄</div>
+      <div class="paper-info">
+        <div class="paper-title">LLM Abstention & Hallucination Control</div>
+        <div class="paper-meta">NLP • Safety • Evaluation</div>
+      </div>
+    </a>
+
   </div>
 </section>
   
