@@ -38,7 +38,20 @@ body{
 
 
 /* ── NAV ─────────────────────────────────────────────────── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:flex-end;padding:.75rem 3rem;background:rgba(15,13,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,58,237,.2)}
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  padding: .75rem 3rem;
+  background: rgba(15,13,20,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(124,58,237,.2);
+}
+
 .nav-links a{font-size:1.15rem;color:var(--text2);text-decoration:none;transition:color .2s}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:.9rem;color:var(--text2);text-decoration:none;transition:color .2s}
@@ -386,7 +399,7 @@ section{padding:6rem 3rem}
 
   /* RESPONSIVE */
 @media(max-width:960px){
-  nav{padding:1rem 1.5rem}
+  top-nav{padding:1rem 1.5rem}
   .nav-links{gap:1.25rem}
   section{padding:4rem 1.5rem}
   .hero{grid-template-columns:1fr;padding:7rem 1.5rem 4rem}
@@ -490,11 +503,13 @@ section{padding:6rem 3rem}
 
 /* Profile image styling */
 .profile-pic {
-       border-radius: 100%; 
-        object-fit: cover;
-        background: transparent;
-  overflow: hidden;
- box-shadow: 
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  overflow: hidden;          /* important */
+  background: transparent;
+
+  box-shadow: 
     0 0 10px rgba(168, 85, 247, 0.7),
     0 0 25px rgba(168, 85, 247, 0.6),
     0 0 50px rgba(168, 85, 247, 0.5);
@@ -638,19 +653,20 @@ body {
   color: white;
 }
 /* SIDEBAR */
-.sidebar{
-  position:fixed;
-  left:0;
-  top:0;
-  height:100vh;
-  width:30px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:24px;
-  background:rgba(10,10,15,0.55);
-  backdrop-filter:blur(14px);
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: rgba(10,10,15,0.55);
+  backdrop-filter: blur(14px);
+  z-index: 9999;
 }
 
 .nav-item{
@@ -667,6 +683,10 @@ body {
   border:1px solid rgba(168,85,247,0.35);
   box-shadow:0 0 18px rgba(168,85,247,0.18);
   transition:0.25s;
+   cursor: pointer;
+}
+.nav-item:active {
+  transform: scale(0.9);
 }
 .nav-item:hover{
   transform:scale(1.12);
@@ -969,6 +989,124 @@ button{
   max-width: 1100px;
   margin: auto;
 }
+.bg-video {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+opacity: 0.5;
+  z-index: -1; 
+ 
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section, div[id] {
+  scroll-margin-top: 80px;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    margin-left: 0;
+    padding-bottom: 90px; /* space for bottom nav */
+  }
+
+  .sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 70px;
+    width: 100%;
+
+    flex-direction: row;
+    justify-content: space-around;
+
+    border-top: 1px solid rgba(168,85,247,0.3);
+    background: rgba(10,10,15,0.9);
+  }
+
+  .nav-item {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-right {
+    display: none; /* hide large image */
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-photo-wrap,
+  .profile-pic img {
+    width: 220px;
+    object-fit: cover;
+    height: 220px;
+  }
+
+  .contact-photo {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 768px) {
+
+  .about-grid,
+  .resume-grid,
+  .contact-grid,
+  .bm-grid,
+  .honours-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  section {
+    padding: 60px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+  }
+}
+.skills-title {
+  text-align: center;
+}
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 </style>
 </head>
 <body>
@@ -981,19 +1119,10 @@ button{
 
     </div>
   </div>
-<!-- SIDEBAR (FIXED STRUCTURE) -->
-<nav class="sidebar">
-  <a href="#home" class="nav-item">🏠</a>
-  <a href="#about" class="nav-item">👤</a>
-  
-  <a href="#projects" class="nav-item">💼</a>
-  <a href="#content-hub" class="nav-item">📚</a>
-  <a href="#contact" class="nav-item">✉️</a>
-</nav>
 
   <!-- TEXT SECOND -->
   <div class="hero-left">
-    <div class="hero-intro glow-white"> 
+    <div class="hero-intro"> 
     <div class="hero-welcome">Welcome</div>
     <div class="hero-intro">Hi, my name is</div>
     
@@ -1011,11 +1140,12 @@ button{
 
 </div>
 
+
 <div class="hero-wrap" id="about">
 
-<div class="about-section about-panel">
+<div class="about-section about-panel" id="about">
 
-  <h2 style="color:#a855f7;">About Me</h2>
+  <h2 style="color:#a855f7;">ABOUT ME</h2>
 
   <p>
     <strong>  
@@ -1030,7 +1160,7 @@ button{
 
 <div></div>
  <div class="about-skills">
-  <h2 style="color:#a855f7;">Specialities</h2>
+  <h2 style="color:#a855f7;">SPECIALITIES</h2>
   <ul>
     <li><strong>Programming Languages:</strong> Python, Java, JavaScript, C++</li>
 
@@ -1049,7 +1179,7 @@ button{
 
 
 </div>
- <h2 style="color:#a855f7;"> Beyond Code</h2>
+ <h2 style="color:#a855f7;"> BEYOND CODE</h2>
 <strong>✈️ Love Traveling and Hiking</strong> | 
 <strong>🚴‍♀️Cycling On Trails</strong> | 
 <strong> 🍴 Restaurant Explorer</strong> 
@@ -1058,12 +1188,10 @@ button{
 </div>
 <!-- PROJECTS -->
   
-  <section class="projects" id="projects" style="padding-top:2rem;">
+  <section class="projects" id="projects">
 
   <div class="about-section about-panel">
- <h2 style="color:#a855f7; text-align:center;">My Selected Projects</h2>
-
-
+ <h2 style="color:#a855f7; text-align:center;">MY SELECTED WORK</h2>
     <div class="research-grid">
 
       <button class="carousel-nav carousel-prev" onclick="slideProject(-1)">&#8249;</button>
@@ -1165,13 +1293,12 @@ button{
   </div>
 </section>
 
-
 <!-- RESUME -->
 
 <section class="resume-section" id="resume">
   <div class="about-section about-panel">
 
-    <h2 style="color:#a855f7; text-align:center;">Resume</h2>
+    <h2 style="color:#a855f7; text-align:center;">RESUME</h2>
 
     <div class="resume-grid">
 
@@ -1254,9 +1381,7 @@ Web Development: HTML, CSS3, React.js, TypeScript, Next.js
 
 <section class="content-hub" id="content-hub">
   <div class="about-section about-panel">
-    <h2 style="color:#a855f7; text-align:center;">Blogs</h2>
-
-    
+    <h2 style="color:#a855f7; text-align:center;">BLOGS</h2>
 
     <div class="card-grid">
 
@@ -1286,13 +1411,10 @@ Web Development: HTML, CSS3, React.js, TypeScript, Next.js
 </section>
 
 <!-- CONTACT -->
-  <section class="contact" id="contact" style="padding-top:2rem;">
-
-  
+  <section id="contact">
 <section class="content-hub" id="content-hub">
     <div class="about-section about-panel">
-
- <h2 style="color:#a855f7; text-align:center;">Get In Touch</h2>
+ <h2 style="color:#a855f7; text-align:center;">GET IN TOUCH</h2>
     <form class="contact-form"
           action="mailto:farheen.s.shaikh05@gmail.com"
           method="POST"
@@ -1338,17 +1460,32 @@ Web Development: HTML, CSS3, React.js, TypeScript, Next.js
     <img src="https://cdn.simpleicons.org/x/ffffff" />
   </a>
 
- 
-
   </a>
 
 </div>
 
     </div>
   
+
   </section>
   </div>
 </section>
+
+<body>
+
+<nav class="sidebar">
+  <a href="#home" class="nav-item">🏠</a>
+  <a href="#about" class="nav-item">👤</a>
+  <a href="#projects" class="nav-item">💼</a>
+  <a href="#content-hub" class="nav-item">📚</a>
+  <a href="#contact" class="nav-item">✉️</a>
+</nav>
+
+<div class="hero-wrap" id="home">
+
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="background.mp4" type="video/mp4">
+</video>
 
 <!-- EXPERIENCE MODAL -->
 <div class="exp-modal-overlay" id="exp-modal" onclick="closeModal(event)">
@@ -1365,8 +1502,6 @@ Web Development: HTML, CSS3, React.js, TypeScript, Next.js
 <section class="resume-section" id="resume" style="padding-top:1rem;">
 
 <script>
-  
-
 
 var hobbyImgs = [
  
@@ -1395,9 +1530,6 @@ function showTab(tabId, el) {
   // activate clicked button
   el.classList.add('active');
 }
-
-
-
 function closeModal(e) {
   if (e.target === document.getElementById('exp-modal')) document.getElementById('exp-modal').classList.remove('open');
 }
