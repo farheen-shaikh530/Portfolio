@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Farheen Shaikh | Portfolio</title>
 
 
-<link rel="icon" href="images/img1.svg'http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%237c3aed'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-size='18' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
+/* GLOBAL BASE STYLES */
+  
+   html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin-left: 0;
+      padding-bottom: 90px;
+      overflow-x: hidden;
+    }
+
+    section, div[id] {
+      scroll-margin-top: 80px;
+    }
+
 
 
 /* ── THEME VARIABLES ─────────────────────────────────────── */
@@ -104,6 +121,8 @@ section{padding:6rem 3rem}
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 14px;
+   align-items: center; 
+  text-align: center; 
 
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
@@ -133,8 +152,9 @@ section{padding:6rem 3rem}
 .about-section {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
+  
   color: var(--text2);
+  align-items: center; 
 }
 
 /* Headings */
@@ -351,7 +371,14 @@ section{padding:6rem 3rem}
 .contact-name{font-size:2.5rem;font-weight:700;margin-bottom:8px;color:var(--text)}
 .contact-title{font-size:1.5rem;color:var(--text2);margin-bottom:1.5rem;font-weight:500}
 .find-me{font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);margin:1.5rem 0 1rem}
-.social-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+.social-btns{
+ display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
 .social-btn{width:56px;height:56px;border-radius:12px;background:#211d2e;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(0,0,0,.3);border:1px solid rgba(124,58,237,.2)}
 .social-btn:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(124,58,237,.3)}
 .contact-right{padding:2.5rem;border-left:1px solid var(--border)}
@@ -379,18 +406,6 @@ section{padding:6rem 3rem}
 .exp-modal-bullets li:last-child{border-bottom:none}
 .exp-modal-bullets li::before{content:'→';position:absolute;left:0;color:#a78bfa}
 
-/* ── HONOURS ─────────────────────────────────────────────── */
-.honours{background:var(--bg)}
-#honours .section-label{color:#a78bfa!important}
-#honours .section-title{color:var(--text)!important;font-weight:800!important}
-.honours-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:1300px;margin:0 auto}
-.honour-card{background:#1a1625;border:1px solid rgba(124,58,237,.18);border-radius:16px;padding:3rem 2.5rem 2.5rem;min-height:420px;box-shadow:0 4px 20px rgba(0,0,0,.3),0 1px 4px rgba(0,0,0,.2);transition:background .2s,transform .2s,border-color .2s,box-shadow .2s;text-align:center}
-.honour-card:hover{background:#211d2e;border-color:rgba(124,58,237,.55);transform:translateY(-10px) scale(1.02);box-shadow:0 20px 50px rgba(124,58,237,.2),0 8px 24px rgba(0,0,0,.3)}
-.honour-card-img{width:100%;height:260px;border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
-.honour-card-img img{width:100%;height:100%;object-fit:cover}
-.honour-card h3{font-size:1.5rem;font-weight:800;color:#a78bfa;margin-bottom:.5rem}
-.honour-card p{font-size:1rem;font-weight:700;color:var(--text2);line-height:1.7}
-
 /* ── FOOTER ──────────────────────────────────────────────── */
 .quick-links-bar{background:var(--bg2);border-top:1px solid var(--border);padding:1.25rem 3rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
 .ql-label{font-size:.7rem;font-weight:700;color:#a78bfa;text-transform:uppercase;letter-spacing:.12em}
@@ -411,21 +426,125 @@ section{padding:6rem 3rem}
   .form-row{grid-template-columns:1fr}
 }
 /* PROJECT CAROUSEL */
-.research-grid{position:relative;max-width:1200px;margin:2rem auto 0;overflow:hidden}
-.research-track{display:flex;flex-wrap:nowrap;transition:transform .6s ease;width:100%}
-.research-card{min-width:100%;width:100%;flex-shrink:0;display:flex;flex-direction:column;align-items:center;background:#fff;border:none;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(124,58,237,.08);padding:0 0 2.5rem;box-sizing:border-box}
-.research-card:hover{box-shadow:0 16px 44px rgba(124,58,237,.15)}
-.research-card-img{width:100%;height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:none;background:#f8f5ff}
-.research-card-img img{width:100%;height:100%;object-fit:contain;padding:1rem}
-.research-card-content{padding:2rem 2.5rem;text-align:center;overflow:visible;width:100%}
-.research-title-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:1rem;flex-wrap:wrap}
-.research-gh{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:8px;background:#7c3aed;border:none;padding:0;text-decoration:none;transition:background .2s,transform .2s;margin-top:1rem}
+.research-grid {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+
+  overflow: hidden; /* keep for carousel */
+}
+.research-track {
+  display: flex;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.research-card {
+  min-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  transition: 0.3s;
+}
+
+.research-card-img {
+  height: 400px;
+  overflow: hidden;
+}
+
+.research-card-content {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.research-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.research-card:hover {
+  transform: translateY(-6px);
+}
+
+.research-card-img {
+  width: 100%;
+  height: 500px;  
+  overflow: hidden;
+  position: relative;
+}
+
+.research-card-img img {
+ width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  object-position: center;
+  display: block;
+
+}
+.research-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.4),
+    transparent
+  );
+
+  color: #fff;
+}
+
+.research-gh{
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+   margin-top: auto;
+   display:inline-flex;
+   align-items:center;
+   justify-content:center;
+   width: 45px;
+   height: 45px;
+   border-radius:8px;background:#7c3aed;border:none;padding:0;text-decoration:none;transition:background .2s,transform .2s;margin-top:1rem}
 .research-gh:hover{background:#5b21b6;transform:scale(1.1)}
 .research-gh svg{width:24px;height:24px;fill:#fff!important}
-.research-title{color:#000000;font-weight:800;font-size:2rem;margin-bottom:1rem;font-family:'Inter',sans-serif;word-wrap:break-word;overflow-wrap:break-word;white-space:normal;text-shadow:2px 2px 0 rgba(26,10,46,.2)}
+
+
 .research-desc{font-size:1.2rem;color:#4a3860;line-height:1.7;margin-bottom:1.5rem;font-weight:600;font-family:'Inter',sans-serif;text-shadow:1px 1px 0 rgba(26,10,46,.1)}
-.research-skills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1rem;margin-bottom:1rem}
-.research-skill-tag{font-size:.8rem;font-weight:600;color:#000000;background:transparent;border:1px solid rgba(0,0,0,.3);border-radius:4px;padding:5px 14px;text-shadow:1px 1px 0 rgba(26,10,46,.08)}
+
+.research-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 1.2rem;
+}
+.research-skill-tag {
+  display: inline-block;
+
+  padding: 8px 14px;
+  border-radius: 8px;   /* rectangular (not pill) */
+
+    background: rgba(255, 255, 255, 0.06); /* transparent glass */
+  border: rgba(255, 255, 255, 0.06);
+
+  color: #e9d5ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.25s ease;
+}
+
+
+
 
 .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:1.5rem}
 .carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(124,58,237,.2);border:none;cursor:pointer;transition:background .3s}
@@ -641,6 +760,18 @@ body {
   fill: #a78bfa; /* softer purple */
   transition: 0.25s;
 }
+.social-btn img {
+  width: 22px;
+  height: 22px;
+  transition: 0.25s;
+
+  filter: brightness(0) saturate(100%) invert(73%) sepia(21%) saturate(700%) hue-rotate(230deg);
+}
+
+.social-btn:hover img {
+  filter: brightness(0) invert(1);
+  transform: scale(1.15);
+}
 
 .social-btn:hover svg {
   fill: #ffffff;
@@ -669,30 +800,19 @@ body {
   z-index: 9999;
 }
 
-.nav-item{
-  width:78px;
-  height:78px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  text-decoration:none;
-  color:white;
-  background:rgba(168,85,247,0.12);
-  border:1px solid rgba(168,85,247,0.35);
-  box-shadow:0 0 18px rgba(168,85,247,0.18);
-  transition:0.25s;
-   cursor: pointer;
-}
+
 .nav-item:active {
   transform: scale(0.9);
 }
-.nav-item:hover{
-  transform:scale(1.12);
-  box-shadow:0 0 30px rgba(168,85,247,0.6);
-  border-color:rgba(168,85,247,0.8);
+
+
+.nav-item:hover,
+.neo-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 30px rgba(168,85,247,0.6);
+  border-color: rgba(168,85,247,0.8);
 }
+
 .nav-item.active{
   background:rgba(168,85,247,0.28);
   box-shadow:0 0 35px rgba(168,85,247,0.7);
@@ -809,45 +929,43 @@ button{
   gap: 18px;
   flex-wrap: wrap;
 }
-.neon-green {
-  color: #39ff14; /* neon green */
-  text-shadow:
-    0 0 5px rgba(57, 255, 20, 0.7),
-    0 0 10px rgba(57, 255, 20, 0.6),
-    0 0 20px rgba(57, 255, 20, 0.5),
-    0 0 40px rgba(57, 255, 20, 0.3);
-}
-/* circular neo buttons */
-.neo-btn {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
 
+
+/* Parent container */
+.social-btns {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;
+  gap: 20px;                 /* spacing between icons */
+  margin-top: 40px;
+}
+
+/* Individual icons */
+.social-btns img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.nav-item,
+.neo-btn {
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 1.6rem;
-  text-decoration: none;
+  font-size: 22px;
 
-  background: rgba(160, 90, 255, 0.08);
-  border: 1px solid rgba(180, 120, 255, 0.35);
-  color: #caa6ff;
+  background: rgba(168,85,247,0.12);
+  border: 1px solid rgba(168,85,247,0.35);
 
-  backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px rgba(168,85,247,0.18);
 
-  box-shadow:
-    0 0 10px rgba(160, 90, 255, 0.25),
-    inset 0 0 12px rgba(160, 90, 255, 0.15);
-
-  transition: all 0.25s ease;
+  transition: 0.25s;
 }
-.social-btns img {
-  width: 22px;
-  
-  height: 22px;
-}
-
 /* hover effect */
 .neo-btn:hover {
   transform: translateY(-4px) scale(1.05);
@@ -990,38 +1108,33 @@ button{
   margin: auto;
 }
 .bg-video {
-  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-opacity: 0.5;
-  z-index: -1; 
- 
-}
-html {
-  scroll-behavior: smooth;
+
+  opacity: 0.25;
+  z-index: -1;   /* stay behind everything */
 }
 
-section, div[id] {
-  scroll-margin-top: 80px;
-}
-html, body {
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
   width: 100%;
-  overflow-x: hidden;
 }
-
-
 @media (max-width: 768px) {
 
   body {
+    
     margin-left: 0;
     padding-bottom: 90px; /* space for bottom nav */
   }
+  
 
   .sidebar {
+    gap: 20px;
     top: auto;
     bottom: 0;
     left: 0;
@@ -1032,7 +1145,7 @@ html, body {
 
     flex-direction: row;
     justify-content: space-around;
-
+ z-index: 99999;
     border-top: 1px solid rgba(168,85,247,0.3);
     background: rgba(10,10,15,0.9);
   }
@@ -1084,6 +1197,9 @@ html, body {
     grid-template-columns: 1fr !important;
   }
 
+
+
+
   section {
     padding: 60px 16px;
   }
@@ -1101,15 +1217,12 @@ html, body {
 .skills-title {
   text-align: center;
 }
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
+
 
 </style>
 </head>
 <body>
+
 <!-- HERO -->
 <div class="hero-wrap" id="home">
  <div class="hero">
@@ -1187,111 +1300,153 @@ html, body {
 
 </div>
 <!-- PROJECTS -->
-  
-  <section class="projects" id="projects">
-
+<section class="projects" id="projects">
   <div class="about-section about-panel">
- <h2 style="color:#a855f7; text-align:center;">MY SELECTED WORK</h2>
+
+    <h2 style="color:#a855f7; text-align:center;">MY SELECTED WORK</h2>
+
     <div class="research-grid">
 
       <button class="carousel-nav carousel-prev" onclick="slideProject(-1)">&#8249;</button>
       <button class="carousel-nav carousel-next" onclick="slideProject(1)">&#8250;</button>
 
       <div class="research-track">
-   <div class="research-card">
 
-      <div class="research-card-img"><img src="QML.png" alt="Quantum ML Chart" /></div>
-      <div class="research-card-content">
-        <div class="research-title"> Implemented Quantum Machine Learning Model to Flag Advance-Fee Fraud Using Scikit - Learn</div>
-        <div class="research-skills">
-
-          <span class="research-skill-tag">Scikit-learn</span>
-          <span class="research-skill-tag">Python</span>
-          <span class="research-skill-tag">NumPy</span>
-          <span class="research-skill-tag">Matplotlib</span>
-          <span class="research-skill-tag">PyTorch</span>
-          <span class="research-skill-tag">Logistic Regression</span>
-          <span class="research-skill-tag">Neural Network</span>
-          <span class="research-skill-tag">Quantum Neural Network</span>
-          <span class="research-skill-tag">SVM</span>
-          <span class="research-skill-tag">Pandas</span>
+        <!-- PROJECT 1 -->
+        <div class="research-card">
+          <div class="research-card-img">
+            <img src="QML.png" alt="Quantum ML" />
+          </div>
+          <div class="research-card-content">
+            <div class="research-title">
+              Implemented Quantum Machine Learning Model to Classify Advance-Fee Fraud
+            </div>
+            <div class="research-skills">
+              <span class="research-skill-tag">Python</span>
+              <span class="research-skill-tag">Scikit-learn</span>
+              <span class="research-skill-tag">PyTorch</span>
+              <span class="research-skill-tag">NumPy</span>
+              <span class="research-skill-tag">Matplotlib</span>
+              <span class="research-skill-tag">Pandas</span>
+            </div>
+          </div>
         </div>
-        <a href="https://github.com/farheen-shaikh530" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
-      </div>
-    </div>
 
-<div class="research-card">
-    <div class="research-card-img"><img src="ReleaseHub.png" alt="ReleaseHub" /></div>
-      <div class="research-card-content">
-        <div class="research-title">Productionised GenAI Release Note Intelligent System To Mitigate Hallucination Through Abstention Mechanism</div>
-        <div class="research-skills">
-          <span class="research-skill-tag">Python</span>
-          <span class="research-skill-tag">PyTorch</span>
-          <span class="research-skill-tag">TensorRT</span>
-          <span class="research-skill-tag">Claude</span>
-          <span class="research-skill-tag">Docker</span>
-          <span class="research-skill-tag">Triton</span>
-          <span class="research-skill-tag">SageMaker</span>
-          <span class="research-skill-tag">AgentCore</span>
-          <span class="research-skill-tag">S3</span>
-          <span class="research-skill-tag">Kubernetes</span>
-          <span class="research-skill-tag">Git</span>
+        <!-- PROJECT 2 -->
+        <div class="research-card">
+          <div class="research-card-img">
+            <img src="ReleaseHub.png" alt="ReleaseHub" />
+          </div>
+          <div class="research-card-content">
+            <div class="research-title">
+              Productionised GenAI Release Note Intelligent System To Mitigate Hallucination Through Abstention Mechanism
+            </div>
+            <div class="research-skills">
+              <span class="research-skill-tag">Python</span>
+              <span class="research-skill-tag">PyTorch</span>
+              <span class="research-skill-tag">TensorRT</span>
+              <span class="research-skill-tag">Docker</span>
+              <span class="research-skill-tag">Triton</span>
+              <span class="research-skill-tag">LangChain</span>
+              <span class="research-skill-tag">Kubernetes</span>
+              <span class="research-skill-tag">GitLab</span>
+              <span class="research-skill-tag">Claude</span>
+            </div>
+          </div>
         </div>
-        <a href="https://github.com/farheen-shaikh530/Release-Note-Generative-AI-Framework-LLM-Abstain" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
-      </div>
-</div>
 
-    <div class="research-card">
-      <div class="research-card-img"><img src="IOT.png" alt="IoT Light Sensor" /></div>
-      <div class="research-card-content">
-        <div class="research-title">Design MongoDB Based Real-Time Smart Ambient Light Monitoring Assistant </div>
-        <div class="research-skills">
-          <span class="research-skill-tag">Python</span>
-          <span class="research-skill-tag">MongoDB</span>
-          <span class="research-skill-tag">JSON</span>
-          <span class="research-skill-tag">JavaScript</span>
-          <span class="research-skill-tag">Render</span>
-          <span class="research-skill-tag">Heroku</span>
-        </div>
-        <a href="https://github.com/farheen-shaikh530/IoT-Light-Sensor" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
-      </div>
-    </div>
-   
-  
-    
-    <div class="research-card">
-      <div class="research-card-img"><img src="course.png" alt="Course Mapping" /></div>
-      <div class="research-card-content">
-        <div class="research-title">Built Personalized Global Courses Recommendation Assitant</div>
-        <div class="research-skills">
-          <span class="research-skill-tag">React.js</span>
-          <span class="research-skill-tag">React Hooks</span>
-          <span class="research-skill-tag">CSS</span>
-          <span class="research-skill-tag">JavaScript</span>
-          <span class="research-skill-tag">JSON</span>
-          <span class="research-skill-tag">Netlify</span>
-        </div>
-        <a href="https://github.com/farheen-shaikh530/Course_Recommendation_WebApp" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
-      </div>
-    </div>
+        
 
-    <div class="research-card">
-      <div class="research-card-img"><img src="dashboard.png" alt="Dashboard" /></div>
-      <div class="research-card-content">
-        <div class="research-title">Design End-to-End Course Recommendation Agent</div>
-        <div class="research-skills">
-          <span class="research-skill-tag">Tableau</span>
-          <span class="research-skill-tag">SQL</span>
-          <span class="research-skill-tag">Microsoft Graph API</span>
+        <!-- PROJECT 4 -->
+        <div class="research-card">
+          <div class="research-card-img">
+            <img src="course.png" alt="Course Recommendation" />
+          </div>
+          <div class="research-card-content">
+            <div class="research-title">
+              Design End-to-End Course Personalised Course Recommendation Assistant
+            </div>
+            <div class="research-skills">
+              <span class="research-skill-tag">React.js</span>
+              <span class="research-skill-tag">Hooks</span>
+              <span class="research-skill-tag">CSS</span>
+              <span class="research-skill-tag">JavaScript</span>
+              <span class="research-skill-tag">Google Sheets API</span>
+            </div>
+          </div>
         </div>
-        <a href="https://github.com/farheen-shaikh530/Study-Abroad-Engagement-Dashboard" target="_blank" class="research-gh"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
-      </div>
-    </div>
-    </div>
-          <div class="carousel-dots" id="carousel-dots"></div>
 
+        <!-- PROJECT 5 -->
+        <div class="research-card">
+          <div class="research-card-img">
+            <img src="dashboard.png" alt="Dashboard" />
+          </div>
+          <div class="research-card-content">
+            <div class="research-title">
+              End-to-End User Cluster Analytics Dashboard
+            </div>
+            <div class="research-skills">
+              <span class="research-skill-tag">Tableau</span>
+              <span class="research-skill-tag">SQL</span>
+              <span class="research-skill-tag">Microsoft Graph API</span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- PROJECT 6 -->
+        <div class="research-card">
+          <div class="research-card-img">
+            <img src="Lambda.png" alt="Dashboard" />
+          </div>
+          <div class="research-card-content">
+            <div class="research-title">
+             Developed AWS Lambda Scheduler to Automate And Schedule Events
+            </div>
+            <div class="research-skills">
+              <span class="research-skill-tag">Java</span>
+              <span class="research-skill-tag">Docker</span>
+              <span class="research-skill-tag">AWS Lambda Java Events Library</span>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECT 3 -->
+        <div class="research-card">
+          <div class="research-card-img">
+            <img src="IOT.png" alt="IoT" />
+          </div>
+          <div class="research-card-content">
+            <div class="research-title">
+              Real-Time Smart Ambient Light Monitoring Assistant
+            </div>
+            <div class="research-skills">
+              <span class="research-skill-tag">MongoDB</span>
+              <span class="research-skill-tag">JavaScript</span>
+              <span class="research-skill-tag">Python</span>
+              <span class="research-skill-tag">JSON</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+     </div>
+
+
+
+
+
+
+      <div class="carousel-dots" id="carousel-dots"></div>
+
+    </div>
   </div>
 </section>
+
+
+
+
+
 
 <!-- RESUME -->
 
@@ -1305,8 +1460,8 @@ html, body {
       <!-- ================= LEFT COLUMN: EXPERIENCE ================= -->
       <div class="resume-column">
         <br>
-<h3 class="section-subtitle skills-title">EXPERIENCE</h3>
-  
+
+  <h3  class="section-subtitle skills-title" style="text-align:center;">EXPERIENCE</h3>
 
         <div class="card-grid">
 
@@ -1342,7 +1497,9 @@ html, body {
       <!-- ================= RIGHT COLUMN: SKILLS ================= -->
       <div class="resume-column">
 <br>
-<h3 class="section-subtitle skills-title">SKILLS</h3>
+
+  <h3  class="section-subtitle skills-title" style="text-align:center;">SKILLS</h3>
+
         <div class="card-grid">
 
           <div class="card">
@@ -1411,8 +1568,7 @@ Web Development: HTML, CSS3, React.js, TypeScript, Next.js
 </section>
 
 <!-- CONTACT -->
-  <section id="contact">
-<section class="content-hub" id="content-hub">
+<section id="contact" class="content-hub">
     <div class="about-section about-panel">
  <h2 style="color:#a855f7; text-align:center;">GET IN TOUCH</h2>
     <form class="contact-form"
@@ -1482,8 +1638,8 @@ Web Development: HTML, CSS3, React.js, TypeScript, Next.js
 </nav>
 
 <div class="hero-wrap" id="home">
-
 <video autoplay muted loop playsinline class="bg-video">
+
   <source src="background.mp4" type="video/mp4">
 </video>
 
@@ -1600,6 +1756,10 @@ function handleFormSubmit(e) {
   }
   setTimeout(tick, 1000);
 })();
+
+document.body.classList.add("no-scroll");
+document.body.classList.remove("no-scroll");
+
 </script>
 </body>
 </html>
