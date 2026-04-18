@@ -295,7 +295,116 @@ section,div[id]{scroll-margin-top:64px}
 }
 .project-link:hover{color:#fff;text-shadow:0 0 8px var(--glow-cyan)}
 
-/* ── RESEARCH / BLOGS ────────────────────────────────────── */
+/* ── RESEARCH SECTION ────────────────────────────────────── */
+.research-section{
+  padding:6rem 2.5rem;
+  background:var(--bg2);
+}
+.research-section .section-header{text-align:center;margin-bottom:3.5rem}
+.research-section .section-title{
+  font-family:var(--font-display);
+  font-size:clamp(1.8rem,4vw,3rem);
+  font-weight:800;letter-spacing:0.12em;
+  color:var(--text);text-transform:uppercase;
+  margin-bottom:0.5rem;
+}
+.research-section .section-line{
+  width:60px;height:3px;margin:0.8rem auto 0;
+  background:var(--cyan);border-radius:2px;
+}
+.research-section .section-sub{
+  font-family:var(--font-mono);font-size:.85rem;color:var(--text3);
+  letter-spacing:0.08em;margin-top:0.6rem;
+}
+
+.research-cards{
+  max-width:960px;margin:0 auto;
+  display:flex;flex-direction:column;gap:2rem;
+}
+
+.r-card{
+  position:relative;
+  background:linear-gradient(135deg,#11101f 0%,#161429 50%,#13112a 100%);
+  border:1px solid rgba(168,85,247,0.18);
+  border-radius:14px;
+  padding:2rem 2.2rem 1.8rem;
+  transition:all 0.35s ease;
+  overflow:hidden;
+}
+.r-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,#a855f7,#22d3ee,#e879f9);
+  opacity:0;transition:opacity 0.35s;
+}
+.r-card:hover{
+  border-color:rgba(168,85,247,0.4);
+  box-shadow:0 0 40px rgba(168,85,247,0.08),0 8px 32px rgba(0,0,0,0.4);
+  transform:translateY(-3px);
+}
+.r-card:hover::before{opacity:1}
+
+.r-badge-row{
+  display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap;margin-bottom:1rem;
+}
+.r-badge{
+  font-family:var(--font-mono);font-size:0.68rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  padding:5px 14px;border-radius:20px;white-space:nowrap;
+}
+.r-badge.venue{
+  background:linear-gradient(135deg,rgba(168,85,247,0.25),rgba(124,58,237,0.35));
+  color:#c084fc;border:1px solid rgba(168,85,247,0.4);
+}
+.r-badge.year{
+  background:transparent;color:#7a7095;border:none;
+  padding-left:2px;padding-right:2px;font-size:0.78rem;
+}
+.r-badge.featured{
+  background:transparent;color:#22d3ee;
+  border:1px solid rgba(34,211,238,0.45);
+  text-shadow:0 0 8px rgba(34,211,238,0.3);
+}
+.r-badge.published{
+  background:transparent;color:#facc15;
+  border:1px solid rgba(250,204,21,0.4);
+  margin-left:auto;
+  text-shadow:0 0 8px rgba(250,204,21,0.2);
+}
+
+.r-title{
+  font-family:'Georgia','Times New Roman',serif;
+  font-size:1.4rem;font-weight:700;color:#e8e6f0;
+  line-height:1.4;margin-bottom:0.5rem;
+}
+.r-authors{
+  font-family:'Georgia',serif;font-size:0.92rem;
+  font-style:italic;color:#7a7095;margin-bottom:0.9rem;
+}
+.r-desc{
+  font-size:1rem;color:#9a93b4;line-height:1.65;margin-bottom:1.2rem;
+}
+
+.r-pdf-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font-mono);font-size:0.78rem;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:#e8e6f0;text-decoration:none;
+  padding:8px 18px;border-radius:6px;
+  border:1px solid rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.04);
+  transition:all 0.3s;
+}
+.r-pdf-btn:hover{
+  border-color:rgba(168,85,247,0.5);
+  background:rgba(168,85,247,0.1);
+  box-shadow:0 0 14px rgba(168,85,247,0.2);
+  color:#c084fc;
+}
+.r-pdf-btn .arrow{font-size:0.9rem;transition:transform 0.25s}
+.r-pdf-btn:hover .arrow{transform:translate(2px,-2px)}
+
+/* ── BLOGS ───────────────────────────────────────────────── */
 .pub-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:1.2rem}
 .pub-card{
   background:var(--card-bg);border:1px solid var(--border);
@@ -406,9 +515,13 @@ section,div[id]{scroll-margin-top:64px}
   .skills-grid,.projects-grid,.edu-grid{grid-template-columns:1fr}
   .hero-name{font-size:clamp(2.2rem,10vw,4rem)}
   .section{padding:4rem 1.2rem}
+  .research-section{padding:4rem 1.2rem}
   .timeline::before{left:12px}
   .timeline-item{padding-left:40px}
   .timeline-dot{left:5px}
+  .r-card{padding:1.4rem 1.2rem}
+  .r-title{font-size:1.15rem}
+  .r-badge.published{margin-left:0}
 }
 </style>
 </head>
@@ -606,7 +719,7 @@ LLM, Generative AI, Agentic AI, RAG, micro-batching, KV caching, streaming, Fine
 
     <div class="project-card">
       <div class="project-card-body">
-        <h3>SQL Dashboards for  Engagement Clusters</h3>
+        <h3>SQL Dashboards for Engagement Clusters</h3>
         <div class="project-tags">
           <span class="ptag">Tableau</span><span class="ptag">SQL</span>
           <span class="ptag">Microsoft Graph API</span>
@@ -655,10 +768,19 @@ LLM, Generative AI, Agentic AI, RAG, micro-batching, KV caching, streaming, Fine
       <div class="timeline-company">University of the Pacific</div>
     </div>
 
-    <div class="timeline-item">
+
+
+      <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">May 2022 &ndash; May 2024</div>
-      <div class="timeline-role">Digital Project Assistant &mdash; Global Admission Office</div>
+      <div class="timeline-date">June 2025 &ndash; May 2024</div>
+      <div class="timeline-role">Assistant Front Desk Manager &mdash; Center For Student Life Department </div>
+      <div class="timeline-company">University of the Pacific</div>
+    </div>
+
+  <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">June 2025 &ndash; August 2025</div>
+      <div class="timeline-role">Digital Project Assistant & Developer &mdash; Global Admission Office</div>
       <div class="timeline-company">University of the Pacific</div>
     </div>
 
@@ -680,31 +802,52 @@ LLM, Generative AI, Agentic AI, RAG, micro-batching, KV caching, streaming, Fine
 </section>
 
 <!-- ── RESEARCH ─────────────────────────────────────── -->
-<section class="section section-alt" id="research">
+<section class="research-section" id="research">
   <div class="section-header">
     <div class="section-title">Research</div>
     <div class="section-line"></div>
     <div class="section-sub">Peer-reviewed publications</div>
   </div>
-  <div class="pub-list">
 
-    <a class="pub-card" href="Paper1.pdf" target="_blank">
-      <div class="pub-badges">
-        <span class="pub-badge venue">Publication</span>
-        <span class="pub-badge featured">Featured</span>
-      </div>
-      <h3>Quantum Computing and Machine Learning In Finance</h3>
-      <p>Farheen Shaikh</p>
-    </a>
+  <div class="research-cards">
 
-    <a class="pub-card" href="Paper2.pdf" target="_blank">
-      <div class="pub-badges">
-        <span class="pub-badge venue">Publication</span>
-        <span class="pub-badge featured">Featured</span>
+    <!-- PAPER 1 -->
+    <div class="r-card">
+      <div class="r-badge-row">
+        <span class="r-badge venue">Publication</span>
+        <span class="r-badge year">2025</span>
+        <span class="r-badge featured">Featured</span>
+        <span class="r-badge published">Published</span>
       </div>
-      <h3>Hallucination in LLMs: Causes and Mitigation Strategies</h3>
-      <p>Farheen Shaikh</p>
-    </a>
+      <div class="r-title">Quantum Computing and Machine Learning In Finance</div>
+      <div class="r-authors">Farheen Shaikh</div>
+      <div class="r-desc">
+        Explores the intersection of quantum computing paradigms and machine learning
+        techniques applied to financial modeling and prediction systems.
+      </div>
+      <a class="r-pdf-btn" href="Paper1.pdf" target="_blank">
+        PDF <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <!-- PAPER 2 -->
+    <div class="r-card">
+      <div class="r-badge-row">
+        <span class="r-badge venue">Publication</span>
+        <span class="r-badge year">2025</span>
+        <span class="r-badge featured">Featured</span>
+        <span class="r-badge published">Published</span>
+      </div>
+      <div class="r-title">Hallucination in LLMs: Causes and Mitigation Strategies</div>
+      <div class="r-authors">Farheen Shaikh</div>
+      <div class="r-desc">
+        Analyzes the root causes of hallucination in large language models and proposes
+        systematic mitigation strategies for improving output reliability.
+      </div>
+      <a class="r-pdf-btn" href="Paper2.pdf" target="_blank">
+        PDF <span class="arrow">↗</span>
+      </a>
+    </div>
 
   </div>
 </section>
@@ -757,7 +900,7 @@ LLM, Generative AI, Agentic AI, RAG, micro-batching, KV caching, streaming, Fine
 
     <div class="edu-card">
       <h3>University of Mumbai</h3>
-      <div class="degree">Bachelor's of Science Inforation Technology </div>
+      <div class="degree">Bachelor's of Science Information Technology</div>
       <div class="edu-date">Mumbai, India</div>
     </div>
 
@@ -832,7 +975,6 @@ function unlockAndScroll(e) {
   e.preventDefault();
   var href = e.currentTarget.getAttribute('href');
   document.body.classList.add('scrollable');
-  // close mobile menu
   document.querySelector('.nav-links').classList.remove('open');
   setTimeout(function() {
     var target = document.querySelector(href);
